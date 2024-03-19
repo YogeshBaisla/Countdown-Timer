@@ -2,23 +2,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+    console.log("submitted")
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <form onSubmit={(e)=>{handleSubmit(e)}}>
+    <div className='Container'>
+      <h1>Countdown <span className='heading'>Timer</span></h1>
+      <input type="datetime-local" required/>
+      <button type='submit'>Start Timer</button>
+      <div className='Countercontainer'>
+        <div className='Counter'>Days</div>
+        <div className='Counter'>Hours</div>
+        <div className='Counter'>Minutes</div>
+        <div className='Counter'>Seconds</div>
+      </div>
     </div>
+    </form>
   );
 }
 
