@@ -6,7 +6,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
-  background-color: blueviolet;
+  background-image: linear-gradient(to bottom left, #74E0FF, #A960FF);
+  background-repeat: no-repeat;
+  overflow: visible;
+  height: 100vh;
+  background-size: 100% 100%;
 }
 
 code {
